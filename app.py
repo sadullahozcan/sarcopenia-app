@@ -54,7 +54,7 @@ payload = {
 }
 if st.button("Predict Sarcopenia Risk"):
     try:
-        runtime = boto3.client("sagemaker-runtime", region_name="eu-north-1")
+        runtime = boto3.client("sagemaker-runtime", region_name="us-east-1")
         response = runtime.invoke_endpoint(
             EndpointName="my-sarco-endpoint",  
             ContentType="application/json",
