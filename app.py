@@ -54,13 +54,7 @@ payload = {
 }
 if st.button("Predict Sarcopenia Risk"):
     try:
-        session = boto3.Session(
-        aws_access_key_id="AKIASTOWSBNFMJIGM3FL",
-        aws_secret_access_key="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",
-        region_name="us-east-1"
-        )
-
-        runtime = session.client("sagemaker-runtime")
+        runtime = boto3.client("sagemaker-runtime", region_name="us-east-1")
         response = runtime.invoke_endpoint(
             EndpointName="canvas-my-sarco-model-deployment-07-09-2025-1-34",  
             ContentType="application/json",
