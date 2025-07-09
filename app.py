@@ -47,11 +47,11 @@ feature_values = [
 payload = {
     "data": {
         "features": {
+            "names": feature_order,
             "values": [feature_values]
         }
     }
 }
-
 if st.button("Predict Sarcopenia Risk"):
     try:
         session = boto3.Session(
