@@ -56,7 +56,7 @@ if st.button("Predict Sarcopenia Risk"):
     try:
         runtime = boto3.client("sagemaker-runtime", region_name="us-east-1")
         response = runtime.invoke_endpoint(
-            EndpointName="canvas-new-deployment-07-09-2025-8-50-PM",  
+            EndpointName="arn:aws:sagemaker:us-east-1:179227986762:endpoint/canvas-new-deployment-07-09-2025-8-50-PM",  
             ContentType="application/json",
             Body=json.dumps(payload)
         )
