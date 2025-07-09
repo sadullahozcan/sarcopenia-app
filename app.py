@@ -5,7 +5,7 @@ import json
 st.title("Sarcopenia Prediction Interface")
 
 # === FLOAT64 FEATURES ===
-AT = st.number_input("AT", format="%.4f")
+AT = st.number_input("AT", format="%.2f")
 BMI = st.number_input("BMI", format="%.2f")
 CST = st.number_input("Chair Stand Test (CST)", format="%.2f")
 Gait_Speed = st.number_input("Gait Speed (m/s)", format="%.2f")
